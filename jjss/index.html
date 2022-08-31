@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="search" id="poisk" >
+    <input type="submit" value="Search number" 
+    style="background-color: purple">
+    <div id = 'vuv'></div>
+    <script>
+
+const contacts = {
+    user1: {name:"Ян", phone: "42-200"},
+    user2: {name:"Полина", phone: "32-495"},
+    user3: {name:"Яг1", phone: "42-201"},
+    user4: {name:"Яз2", phone: "42-202"},
+    user5: {name:"Яп3", phone: "42-203"},
+    user6: {name:"Ял4", phone: "42-204"},
+    user7: {name:"Яд5", phone: "42-205"},
+    user8: {name:"Яс6", phone: "42-206"},
+    user9: {name:"Ям7", phone: "42-207"}
+};
+
+        document.addEventListener('input', (dasha)=>{
+
+            if(dasha.target.id=='poisk') search(dasha.target.value)
+        })
+       
+         function search(str){
+             document.getElementById('vuv').innerHTML='';
+            let srch = new RegExp(str);
+            for(key in contacts)
+            {
+                if (srch.test(contacts[key].phone))
+                document.getElementById('vuv').insertAdjacentHTML('beforeend', `<p><span> ${contacts[key].name}</span> <span> ${contacts[key].phone}</span></p>`)
+            }
+        }
+
+        
+
+        // var p = new RegExp('20[14]', 'g');
+        // var str = "200, 201, 202, 203, 204";
+        // console.log(str.search(p)); // 5
+
+//         var p = /([0-9]+)/g;
+// var str = "200, 201, 202, 203, 204";
+// var str2 = str.replace(p, function(s, x, offset, source_str) {
+// console.log("Найденный шаблон: " + s + "; " + x + " Смещение: " + offset + "; " + source_str);
+// var n = parseInt(s, 10);
+// n += 10;
+// return n + "";
+// });
+// console.log(str2);
+
+
+// var p = /\s/g;
+// var str = "1 2 3\n4\t5\r6";
+// var arr = str.split(p);
+// console.log(arr); // Array [ "1", "2", "3", "4", "5", "6" ]
+// arr = str.split(p, 3);
+// console.log(arr); // Array [ "1", "2", "3" ]
+
+
+
+// var p = /20[14]/g;
+// var str = "200, 201, 202, 203, 204";
+// console.log(p.test(str)); // true
+// console.log(p.test(str)); // true
+// console.log(p.test(str)); // false
+// console.log(p.test("200")); // false
+
+
+// var p = /([0-9]{2}):([0-9]{2}):([0-9]{2})/g;
+// var str = "18:47:27 05:12:22";
+// console.log(p.exec(str));
+// // Array [ "18:47:27", "18", "47", "27" ]
+// console.log(p.exec(str));
+// // Array [ "05:12:22", "05", "12", "22" ]
+// console.log(p.exec(str)); // null
+// console.log(p.exec("200")); // null
+
+
+
+        </script>
+         
+    
+</body>
+</html>

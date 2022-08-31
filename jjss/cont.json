@@ -1,0 +1,12 @@
+{
+    "user1": {"name":"Ян", "phone": "42-200"},
+    "user2": {"name":"Полина", "phone": "32-495"},
+    "user3": {"name":"Яг1", "phone": "42-201"},
+    "user4": {"name":"Яз2", "phone": "42-202"},
+    "user5": {"name":"Яп3", "phone": "42-203"},
+    "user6": {"name":"Ял4", "phone": "42-204"},
+    "user7": {"name":"Яд5", "phone": "42-205"},
+    "user8": {"name":"Яс6", "phone": "42-206"},
+    "user9": {"name":"Ям7", "phone": "42-207"}
+}
+
